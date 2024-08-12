@@ -3,7 +3,7 @@ IOT based Home Automation System.
 
 #Libraries used:
 1.GAS sensor library
-2.Motion Sensor Library
+2.PIR Motion Sensor Library
 
 #Technologies used in simulation:
 1.Raspberry PI - main firmware.
