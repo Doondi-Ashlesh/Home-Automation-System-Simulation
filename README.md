@@ -5,9 +5,9 @@ IOT based Home Automation System.
 1.GAS sensor library
 2.PIR Motion Sensor Library
 
-#Technologies used in simulation:
-1.Raspberry PI - main firmware.
-2.Raspberry Pi 4 model B
+#Software & Technologies used in simulation:
+1.Proteus 8.9 professional - schematic design and code integration.
+2.Raspberry Pi 4 model B -firmware
 3.MOTOR-DC (5-12v,1000RPM) 
 4.MQ-2 GAS SENSOR (300-10000 ppm)
 5.NPN transistor 
