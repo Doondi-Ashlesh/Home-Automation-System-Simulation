@@ -1,0 +1,118 @@
+-------------------------------
+GAS detection system - sequence
+--------------------------------
+
+The gas detection sysem works as depicted in the above sequence diagram
+->The gas sensor continuously takes input from the environment.
+->When any gas or smoke is detected by the sensor, it sends a high voltage to the raspberrypi indicating gas has been detected.
+->once the raspberryPi gets input from the gas sensor, the raspberryPi inhibits other sensors from working.
+->The raspberrypi then sends respective signals to LCD,Buzzer module,GSM module.
+LCD - Display warning message
+Buzzer module - To trigger alarm
+GSM module - To Send SMS alerts to the registered mobile number.
+
+---------------------------
+HAS light system -sequence
+---------------------------
+
+The automatic light system follows the above diagramativ sequence:
+->The LDR sensor is enabled after detection of motion from the PIR sensor.
+->then it takes the light intensity reading from the environment it is present in.
+->this reading is sent to the raspberryPi.
+->the raspberrpi then talies these values with the preset values.
+->if the condition is met(reading < preset value) then the raspberrypi send a voltage pulse to turn On the LED light if  not , the LED stays OFF.
+->the readings and status of the LED are then displayed on the LCD.
+
+-------------------------------
+HAS temp and fan system-sequence
+-------------------------------
+Temperature and Automatic fan system flow is described in the above diagram:
+->the temperature sensor gets enabled after detection of human from the PIR sensor
+->The temperature sensor then continuously gets input from the environment.
+->then reading from the sensor is converted to digital using adc module and then sent to raspberrypi
+->The raspbrryPi then tallies the temperature reading with preset values.
+->When the condition is met(reading>prest temperature value), the raspberrypi sends a voltage pulse to the DC fan to turn ON ,if not it stas on OFF condition.
+->the reading from the temperature sensor and the status of the DC fan are then displayed on the LCD screen. 
+
+-------------------
+HAS usecase diagram
+--------------------
+
+The raspberrypi interacts with other sensors(actors) as depicted in the diagram above:
+->the raspberrypi gets input from gas sensor if any gas is detected and then sends alerts using GSM module,Sets off alarm using buzzer module and disables remaining sensors
+->if motion is detected based on the input from PIR motion sensor, raspberrypi then enables rest of the sensors.If not then the sensors stay disabled.
+->After the detection of human, the raspberrypi interacts with temperature and LDR sensor to get temperature and light intensity readings respectively.
+->These readings are converted to digital signals with the help of ADC module. 
+->Depending on the preset conditions for temperature and light intensity, the raspberryPi interacts with DC fan and LED bulb to turn them ON or OFF.
+-> Finally raspberryPi interacts with LCD to dsiplay the readings from sensors and the status of the DC fan and LED bulb.
+
+--------------------
+HAS Activity diagram
+---------------------
+The following diagram shows the activity flow for the Home automation System :
+->the GAS sensor first detects for the presence of gas or smoke in the given environment.
+->if the gas is detected, Warning message is dispayed on the LCD,alarm gets trigerred and alerts to registered user mobile via SMS.
+->if no Gas is detected, then Pir motion sensor sinses for human presence.
+->If human presence is detected, then LDR sensor and Temperature sensor are enabled
+->First, The LDR sensor takes Light intensity from the environment.
+->If the reading is low then LED buld is turned ON.
+->Then, Temperature reading from the surroundings is taken from the temperature sensor.
+->if the temperature is greater than room temperature, The DC fan is Turned ON.
+->Finally, all the readings from the sensors and and the status of the Dc fan and LED bulb are displayed on the LCD screen.
+
+
+-----------------
+HAS Architecture
+-----------------
+The above diagram depicts the architecture for the Home Automation System.
+->The Lm35temperature sensor,LDR sensor,AC module,PIR motion Sensor,MQ-2 Gas sensor all act as input devices to the raspberrypi micro controller.
+->The LCD,Dc fan motor,LED bulb,GSM module,Buzzer module all act as output devices.
+->THese output devices get triggered based on the inputs received from the input sensors and output signals from the raspberrypi.
+
+--RaspberrypI- acts as amicro controller command centre for the setup, coordinates with sensors
+--LM35 temperature sensor - Sensor for sensing temperature readings
+--LDR sensor - Sensor for Sensing Light Intensity in the particular surroundingd.
+--MCP3208 ADC module - To convert analog signals from temperature and LDR sensor to digital signals and send them to raspberrypi.
+--PIR motion sensor - Detects any human presence based on passive infrared rays (heat emission)
+--Mq-2 gas sensor - Detects the presence of harmful gases( H2,LPG,CH4,C0,Alcohol,Smmoke and Propane)
+--Dc motor - to control the temperature in the room environment
+--LED bulb -  to adjust the light intensity in the room
+--GSM module - To send SMS alerts to registered mobile number on detection of harmful gas detection.
+--Buzzer mldule - to Sound off alarm on harmful gas detection 
+--LCD - to display the messages, sensor readings, Device status status.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

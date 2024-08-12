@@ -1,0 +1,13 @@
+--------------------
+PROJECT OBJECTIVES :
+--------------------
+
+
+1.Simulating a Home Automation System based on IOT for personal environment
+2.Utilization of devices that are easy to install and function with.
+3.Implemantation using low-price materials and devices for developing the system
+4.Make it suitable to control home environment in a easy, smart and in a comfortable way
+5.To design a simple system that allows even unexperienced and disabled people to us it.
+6.Implementing safety systems for incidents involving fire/gas.
+7.Implementing Human presence detection system for efficient home control.
+8.Make it scalable for future add-ons.
