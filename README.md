@@ -1,5 +1,9 @@
 IOT based Home Automation System.
-.
+".pdsprj" main file extension.
+
+#Libraries used:
+1.GAS sensor library
+2.Motion Sensor Library
 
 #Technologies used in simulation:
 1.Raspberry PI - main firmware.
