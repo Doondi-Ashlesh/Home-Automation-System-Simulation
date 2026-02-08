@@ -1,4 +1,4 @@
-I#  IoT-Based Home Automation System (Proteus + Raspberry Pi Simulation)
+#  IoT-Based Home Automation System (Proteus + Raspberry Pi Simulation)
 
 ---
 
