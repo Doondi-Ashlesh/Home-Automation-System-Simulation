@@ -1,4 +1,4 @@
-I# 🏠 IoT-Based Home Automation System (Proteus + Raspberry Pi Simulation)
+I#  IoT-Based Home Automation System (Proteus + Raspberry Pi Simulation)
 
 ---
 
@@ -22,20 +22,20 @@ The solution is also designed to be scalable, allowing integration of more senso
 
 ## Technologies & Integrations
 
-### 🧠 Firmware & Controller
+###  Firmware & Controller
 - **Raspberry Pi 4 Model B** – used as the main control unit in the simulation
 - Simulated GPIO and SPI/UART logic for sensor integration
 
-### ⚙️ Proteus Environment
+###  Proteus Environment
 - **Proteus 8.9 Professional**
   - Used for complete **circuit schematic design**, **component integration**, and **simulation testing**
   - Project file: `.pdsprj` (Proteus Design Suite Project)
  
-# 🧰 Software Stack
+#  Software Stack
 - **Python 3**
 - **Raspbian OS (on actual hardware)**
 
-### 📦 Python Libraries
+###  Python Libraries
 
 - `RPi.GPIO` – GPIO pin control  
 - `spidev` – SPI communication with MCP3208  
@@ -43,7 +43,7 @@ The solution is also designed to be scalable, allowing integration of more senso
 - `time` – Delays and polling  
 
 
-### 🧰 Hardware Components Simulated
+###  Hardware Components Simulated
 
 | Component                  | Role                                                        |
 |---------------------------|-------------------------------------------------------------|
@@ -71,7 +71,7 @@ These libraries were required to simulate analog/digital behavior for respective
 
 ## Execution in Proteus
 
-### ⚙️ How to Run the Simulation
+###  How to Run the Simulation
 
 1. **Install Proteus 8.9 Professional** if not already installed.
 2. Open the project:  
